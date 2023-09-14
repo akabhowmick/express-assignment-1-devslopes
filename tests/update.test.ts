@@ -105,6 +105,7 @@ describe("POST /dogs", () => {
     );
 
     for (const key of ["id", "cheese"]) {
+      console.log(data.errors);
       expect(data.errors).toContain(
         `'${key}' is not a valid key`
       );
